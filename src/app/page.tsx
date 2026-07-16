@@ -169,7 +169,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10 overflow-hidden">
-          <div ref={sliderRef} className="mx-auto flex w-full max-w-[940px] gap-4 overflow-x-auto pb-4 hide-scrollbar">
+          <div ref={sliderRef} className="mx-auto flex w-full max-w-[940px] gap-4 overflow-x-auto pb-4 hide-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <article key={`${testimonial.name}-${index}`} className="min-w-[300px] max-w-[300px] flex-shrink-0 rounded-3xl bg-sky-900/80 p-4 transition duration-300 hover:bg-sky-800 hover:-translate-y-0.5">
                 <div className="flex items-center gap-3">

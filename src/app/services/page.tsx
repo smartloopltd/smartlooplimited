@@ -86,15 +86,13 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="bg-sky-950 text-slate-100">
-      <section className="overflow-visible mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+    <main className="bg-sky-950 text-slate-100 overflow-x-hidden">
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(186,230,253,0.12),_transparent_30%)]" />
-        <div className="pointer-events-none absolute bottom-0 right-0 -z-10 h-56 w-[110%] rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80 transform translate-x-1/2 translate-y-1/2" />
-        <div className="pointer-events-none absolute bottom-0 right-0 -z-10 h-40 w-[130%] bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60 transform translate-x-1/2 translate-y-1/2" />
-        <div className="pointer-events-none absolute -left-12 -top-8 h-56 w-[110%] rounded-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
-        <div className="pointer-events-none absolute -left-6 -top-2 h-40 w-[130%] bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
-
-        {/* removed section-level bottom-left glows; glow will be inside the hero container */}
+        <div className="pointer-events-none absolute bottom-0 right-0 -z-10 h-56 w-full rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
+        <div className="pointer-events-none absolute bottom-0 right-0 -z-10 h-40 w-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
+        <div className="pointer-events-none absolute -left-12 -top-8 h-56 w-full rounded-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
+        <div className="pointer-events-none absolute -left-6 -top-2 h-40 w-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
 
         <div className="max-w-3xl relative overflow-visible z-10">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200 relative z-10">Services</p>
@@ -105,7 +103,7 @@ export default function ServicesPage() {
             We help businesses build modern, resilient digital systems through strategic software development, full-stack engineering, cloud operations, smart infrastructure, and practical enablement that turns technology into measurable growth.
           </p>
 
-          <div className="absolute bottom-0 left-0 -translate-x-1/6 translate-y-1/4 w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none z-0" />
+          <div className="absolute bottom-0 left-0 w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none z-0" />
         </div>
 
         
