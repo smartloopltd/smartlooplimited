@@ -87,12 +87,12 @@ const services = [
 export default function ServicesPage() {
   return (
     <main className="bg-sky-950 text-slate-100 overflow-x-hidden">
-      <section className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(186,230,253,0.12),_transparent_30%)]" />
-        <div className="pointer-events-none absolute bottom-0 right-0 -z-10 h-56 w-full rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
-        <div className="pointer-events-none absolute bottom-0 right-0 -z-10 h-40 w-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
-        <div className="pointer-events-none absolute -left-12 -top-8 h-56 w-full rounded-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
-        <div className="pointer-events-none absolute -left-6 -top-2 h-40 w-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
+        <div className="pointer-events-none absolute -bottom-32 -right-40 -z-10 h-56 w-72 rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
+        <div className="pointer-events-none absolute -bottom-32 -right-40 -z-10 h-40 w-96 bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
+        <div className="pointer-events-none absolute -top-32 -left-40 h-56 w-72 rounded-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
+        <div className="pointer-events-none absolute -top-32 -left-40 h-40 w-96 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
 
         <div className="max-w-3xl relative overflow-visible z-10">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200 relative z-10">Services</p>
