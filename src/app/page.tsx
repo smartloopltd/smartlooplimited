@@ -69,7 +69,10 @@ export default function Home() {
     const step = (time: number) => {
       const delta = time - lastTime;
       lastTime = time;
-      slider.scrollLeft += delta * 0.04;
+      
+      // Increase scroll speed and ensure minimum delta to prevent stalling on mobile
+      const scrollSpeed = Math.max(delta, 16) * 0.06;
+      slider.scrollLeft += scrollSpeed;
 
       const halfScroll = slider.scrollWidth / 2;
       if (slider.scrollLeft >= halfScroll) {
