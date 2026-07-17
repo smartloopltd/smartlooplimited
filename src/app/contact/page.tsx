@@ -54,70 +54,73 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-12 pt-10 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16 lg:pb-14">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Get in touch</p>
-            <div className="mt-6 space-y-4 text-sm text-sky-100/80">
-              <p>hello@smartloop.co</p>
-              <p>+1 (555) 010-2040</p>
-              <p>Based in remote-first teams worldwide.</p>
+      <section className="w-full bg-white">
+        <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-10 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16 lg:pb-14">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Get in touch</p>
+              <div className="mt-6 space-y-4 text-sm text-sky-900/85">
+                <p>hello@smartloop.co</p>
+                <p>+1 (555) 010-2040</p>
+                <p>Based in remote-first teams worldwide.</p>
+              </div>
             </div>
-          </div>
 
-          <form className="space-y-5">
-            <div className="grid gap-5 md:grid-cols-2">
-              <label className="text-sm font-medium text-sky-50">
-                Name
-                <input className="mt-2 w-full rounded-2xl border border-sky-300/20 bg-sky-900/70 px-4 py-3 text-slate-100 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="Your name" />
+            <form className="space-y-5">
+              <div className="grid gap-5 md:grid-cols-2">
+                <label className="text-sm font-medium text-sky-950">
+                  Name
+                  <input className="mt-2 w-full rounded-2xl border border-sky-300/30 bg-white px-4 py-3 text-sky-950 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="Your name" />
+                </label>
+                <label className="text-sm font-medium text-sky-950">
+                  Email
+                  <input className="mt-2 w-full rounded-2xl border border-sky-300/30 bg-white px-4 py-3 text-sky-950 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="you@example.com" />
+                </label>
+              </div>
+              <label className="block text-sm font-medium text-sky-950">
+                Project details
+                <textarea className="mt-2 min-h-32 w-full rounded-2xl border border-sky-300/30 bg-white px-4 py-3 text-sky-950 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="Tell us about the experience you want to build." />
               </label>
-              <label className="text-sm font-medium text-sky-50">
-                Email
-                <input className="mt-2 w-full rounded-2xl border border-sky-300/20 bg-sky-900/70 px-4 py-3 text-slate-100 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="you@example.com" />
-              </label>
-            </div>
-            <label className="block text-sm font-medium text-sky-50">
-              Project details
-              <textarea className="mt-2 min-h-32 w-full rounded-2xl border border-sky-300/20 bg-sky-900/70 px-4 py-3 text-slate-100 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="Tell us about the experience you want to build." />
-            </label>
-            <button className="inline-flex items-center justify-center rounded-full bg-sky-400 px-5 py-3 font-medium text-sky-950 transition-all duration-300 hover:bg-sky-300 hover:scale-105 hover:shadow-2xl hover:shadow-sky-400/50">
-              Send enquiry
-            </button>
-          </form>
+              <button className="inline-flex items-center justify-center rounded-full bg-sky-400 px-5 py-3 font-medium text-white transition-all duration-300 hover:bg-sky-500 hover:scale-105 hover:shadow-2xl hover:shadow-sky-400/50">
+                Send enquiry
+              </button>
+            </form>
+          </div>
         </div>
       </section>
 
-      <section className="w-full border-t border-sky-400/10 bg-sky-950/70">
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-sky-400/10 px-4 py-3 text-sm text-sky-100/80 sm:px-6 sm:px-8 lg:px-10">
-          <p className="font-medium">Interactive location map</p>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setMapMode('roadmap')}
-              className={`rounded-full px-3 py-1.5 transition-all duration-300 hover:scale-110 hover:shadow-lg ${mapMode === 'roadmap' ? 'bg-sky-400 text-sky-950 hover:shadow-sky-400/50' : 'bg-sky-900/70 text-sky-100 hover:shadow-sky-100/20'}`}
-            >
-              Roadmap
-            </button>
-            <button
-              type="button"
-              onClick={() => setMapMode('satellite')}
-              className={`rounded-full px-3 py-1.5 transition-all duration-300 hover:scale-110 hover:shadow-lg ${mapMode === 'satellite' ? 'bg-sky-400 text-sky-950 hover:shadow-sky-400/50' : 'bg-sky-900/70 text-sky-100 hover:shadow-sky-100/20'}`}
-            >
-              Satellite
-            </button>
+      <section className="w-full bg-white border-t border-sky-200/20">
+        <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-sky-200/20 pb-4 text-sm text-sky-900/85 sm:px-0">
+            <p className="font-medium text-sky-950">Interactive location map</p>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setMapMode('roadmap')}
+                className={`rounded-full px-3 py-1.5 transition-all duration-300 hover:scale-110 hover:shadow-lg ${mapMode === 'roadmap' ? 'bg-sky-400 text-white hover:shadow-sky-400/50' : 'bg-sky-100 text-sky-950 hover:shadow-sky-200/50'}`}
+              >
+                Roadmap
+              </button>
+              <button
+                type="button"
+                onClick={() => setMapMode('satellite')}
+                className={`rounded-full px-3 py-1.5 transition-all duration-300 hover:scale-110 hover:shadow-lg ${mapMode === 'satellite' ? 'bg-sky-400 text-white hover:shadow-sky-400/50' : 'bg-sky-100 text-sky-950 hover:shadow-sky-200/50'}`}
+              >
+                Satellite
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div className="relative h-[320px] w-full sm:h-[380px] lg:h-[460px] overflow-hidden rounded-[1.75rem] border border-sky-400/10 bg-sky-950/70 transition duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-sky-400/20">
+          <div className="relative h-[320px] w-full sm:h-[380px] lg:h-[460px] overflow-hidden rounded-[1.75rem] border border-sky-200/20 bg-sky-50 transition duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-sky-200/20 mt-4">
           {!isUnlocked && (
             <button
               type="button"
               onClick={handleDoubleTapUnlock}
               onTouchEnd={handleDoubleTapUnlock}
-              className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-sky-950/90 px-6 text-center text-sm font-medium text-sky-100"
+              className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-sky-50/90 px-6 text-center text-sm font-medium text-sky-900"
             >
-              <span className="text-base font-semibold">Double-tap to explore the map</span>
-              <span className="mt-2 text-sky-200/80">The map stays locked until you tap twice.</span>
+              <span className="text-base font-semibold text-sky-950">Double-tap to explore the map</span>
+              <span className="mt-2 text-sky-700">The map stays locked until you tap twice.</span>
             </button>
           )}
 
@@ -129,6 +132,7 @@ export default function ContactPage() {
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />
+          </div>
         </div>
       </section>
     </main>

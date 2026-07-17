@@ -105,25 +105,26 @@ export default function ServicesPage() {
 
           <div className="absolute bottom-0 left-0 w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none z-0" />
         </div>
+      </section>
 
-        
-        <div className="mt-12 border-t border-sky-300/20 pt-8 lg:pt-10">
+      <section className="w-full bg-white">
+        <div className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <article key={service.id} className="p-1">
               {service.category && (
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300/70 mb-2">{service.category}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-600 mb-2">{service.category}</p>
               )}
-              <h2 className="text-xl font-semibold text-white">{service.title}</h2>
-              <p className="mt-4 text-sm leading-7 text-sky-100/80">{service.description}</p>
+              <h2 className="text-xl font-semibold text-sky-950">{service.title}</h2>
+              <p className="mt-4 text-sm leading-7 text-sky-900/85">{service.description}</p>
               
               {service.features && (
                 <div className="mt-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300/70 mb-3">Key Features</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-600 mb-3">Key Features</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex gap-2 text-xs text-sky-100/70">
-                        <span className="mt-1 flex-shrink-0 w-1 h-1 rounded-full bg-sky-400/60" />
+                        <li key={idx} className="flex gap-2 text-xs text-sky-900/75">
+                          <span className="mt-1 flex-shrink-0 w-1 h-1 rounded-full bg-sky-400" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -134,12 +135,12 @@ export default function ServicesPage() {
             </article>
           ))}
         </div>
-          <div className="mt-20 md:mt-24 lg:mt-28 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mt-20 md:mt-24 lg:mt-28 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between border-t border-sky-200/20 pt-8">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Ready to scale?</p>
-              <h2 className="mt-2 text-2xl font-semibold text-white">Let’s build the right technology solution for your business.</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Ready to scale?</p>
+              <h2 className="mt-2 text-2xl font-semibold text-sky-950">Let's build the right technology solution for your business.</h2>
             </div>
-            <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 font-medium text-sky-950 transition-all duration-300 hover:bg-sky-50 hover:scale-105 hover:shadow-2xl hover:shadow-sky-400/50">
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-sky-400 px-5 py-3 font-medium text-white transition-all duration-300 hover:bg-sky-500 hover:scale-105 hover:shadow-2xl hover:shadow-sky-400/50">
               Start a conversation
             </Link>
           </div>

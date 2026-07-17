@@ -41,33 +41,33 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-12 pt-10 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16 lg:pb-14">
-        <div className="p-0 sm:p-0 lg:p-0">
+      <section className="w-full bg-white">
+        <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-10 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16 lg:pb-14">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Featured project</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Featured project</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-sky-950 sm:text-4xl">
               The Gathering Place: a web development training initiative for young single adults.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-sky-100/80">
+            <p className="mt-6 text-lg leading-8 text-sky-900/85">
               The Gathering Place is a department for YSA's in The Church of Jesus Christ of Latter-day Saints. It is a place where young single adults in the church organization and non-members come together to learn a variety of life skills.
             </p>
           </div>
 
           <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Project focus</p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">Smartloop Limited led the web development department</h3>
-              <p className="mt-4 text-base leading-8 text-sky-100/75">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Project focus</p>
+              <h3 className="mt-3 text-2xl font-semibold text-sky-950">Smartloop Limited led the web development department</h3>
+              <p className="mt-4 text-base leading-8 text-sky-900/85">
                 In this Gathering Place initiative, Smartloop Limited was in charge of the web development department. We served as the instructors for the web development training and guided the project for young single adults who wanted to learn the foundations of web development.
               </p>
-              <p className="mt-4 text-base leading-8 text-sky-100/75">
+              <p className="mt-4 text-base leading-8 text-sky-900/85">
                 The training focused on helping participants build practical skills, develop confidence, and understand how modern web development works in a real-world setting. It was a meaningful opportunity to support young adults with valuable digital knowledge and hands-on experience.
               </p>
             </div>
 
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">What made it meaningful</p>
-              <ul className="mt-4 space-y-4 text-base leading-7 text-sky-100/75">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">What made it meaningful</p>
+              <ul className="mt-4 space-y-4 text-base leading-7 text-sky-900/85">
                 <li>• A practical learning space where YSAs and non-members could grow in digital skills.</li>
                 <li>• A structured web development training programme led by Smartloop Limited.</li>
                 <li>• An environment focused on confidence, learning, and long-term personal growth.</li>
@@ -76,34 +76,34 @@ export default function ProjectsPage() {
             </div>
           </div>
 
-          <div className="mt-16 border-t border-sky-400/10 pt-6 sm:pt-8">
+          <div className="mt-16 border-t border-sky-200/20 pt-6 sm:pt-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Photo gallery</p>
-                <h3 className="mt-2 text-2xl font-semibold text-white">Moments from the training experience</h3>
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Photo gallery</p>
+                <h3 className="mt-2 text-2xl font-semibold text-sky-950">Moments from the training experience</h3>
               </div>
-              <p className="max-w-2xl text-sm leading-7 text-sky-100/70">
+              <p className="max-w-2xl text-sm leading-7 text-sky-900/80">
                 A dedicated space for workshop images, team sessions, and the energy behind the project as it unfolded.
               </p>
             </div>
 
             <div className="mt-8 relative left-1/2 right-1/2 w-[calc(100vw-2rem)] -translate-x-1/2 sm:w-[calc(100vw-3rem)] lg:w-[calc(100vw-4rem)]">
-              <div className="relative h-[320px] w-full overflow-hidden rounded-[1.75rem] bg-sky-950 sm:h-[380px] lg:h-[460px]">
+              <div className="relative h-[320px] w-full overflow-hidden rounded-[1.75rem] bg-sky-100 sm:h-[380px] lg:h-[460px]">
                 <Image
                   src={slideImages[currentSlide]}
                   alt={`YSA training photo ${currentSlide + 1}`}
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 pointer-events-none bg-sky-950/50" />
-                <div className="absolute left-1/2 top-4 -translate-x-1/2 flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-sky-200/80">
+                <div className="absolute inset-0 pointer-events-none bg-sky-950/20" />
+                <div className="absolute left-1/2 top-4 -translate-x-1/2 flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-sky-700">
                   <span>{currentSlide + 1} / {slideImages.length}</span>
                 </div>
                 <button
                   type="button"
                   onClick={prevSlide}
                   aria-label="Previous slide"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-950/90 p-3 text-2xl text-sky-100 shadow-lg shadow-sky-950/20 transition hover:bg-sky-950/100 focus:outline-none focus:ring-2 focus:ring-sky-400"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/90 p-3 text-2xl text-sky-950 shadow-lg shadow-sky-200/30 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-sky-400"
                 >
                   ‹
                 </button>
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
                   type="button"
                   onClick={nextSlide}
                   aria-label="Next slide"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-950/90 p-3 text-2xl text-sky-100 shadow-lg shadow-sky-950/20 transition hover:bg-sky-950/100 focus:outline-none focus:ring-2 focus:ring-sky-400"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/90 p-3 text-2xl text-sky-950 shadow-lg shadow-sky-200/30 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-sky-400"
                 >
                   ›
                 </button>

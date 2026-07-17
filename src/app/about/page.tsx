@@ -37,15 +37,20 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-sky-300/20 pt-8 lg:pt-10">
-        <div className="grid gap-8 md:grid-cols-3">
-          {values.map((value) => (
-            <article key={value.title}>
-              <h2 className="text-xl font-semibold text-white">{value.title}</h2>
-              <p className="mt-4 text-sm leading-7 text-sky-100/80">{value.description}</p>
-            </article>
-          ))}
-        </div>
+      </section>
+
+      <section className="w-full bg-white">
+        <div className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="border-t border-sky-300/20 pt-8 lg:pt-10">
+            <div className="grid gap-8 md:grid-cols-3">
+              {values.map((value) => (
+                <article key={value.title}>
+                  <h2 className="text-xl font-semibold text-sky-950">{value.title}</h2>
+                  <p className="mt-4 text-sm leading-7 text-sky-900/85">{value.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </main>
