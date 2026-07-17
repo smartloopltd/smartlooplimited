@@ -28,8 +28,8 @@ export default function ProjectsPage() {
         <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(186,230,253,0.12),_transparent_30%)]" />
         <div className="pointer-events-none absolute -right-16 -bottom-12 h-72 w-[120%] rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.24),_rgba(56,189,248,0.04),transparent_88%)] blur-3xl opacity-90" />
         <div className="pointer-events-none absolute -left-16 -top-12 h-72 w-[120%] rounded-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.24),_rgba(56,189,248,0.04),transparent_88%)] blur-3xl opacity-90" />
-        <div className="relative mx-auto flex min-h-[48svh] w-full max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <div className="max-w-4xl">
+        <div className="relative mx-auto flex min-h-[48svh] w-full max-w-7xl flex-col justify-start px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28 md:justify-center lg:px-8 lg:pb-24 lg:pt-32">
+          <div className="relative z-10 max-w-4xl">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Our projects</p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Building humanity, transforming lives, and empowering businesses

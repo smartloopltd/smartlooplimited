@@ -16,7 +16,7 @@ const values = [
 export default function AboutPage() {
   return (
     <main className="bg-sky-950 text-slate-100">
-      <section className="relative overflow-visible mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section className="relative overflow-visible mx-auto w-full max-w-7xl px-4 pt-28 pb-20 sm:px-6 sm:pt-32 lg:px-8 lg:pt-36 lg:pb-24">
         <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(186,230,253,0.12),_transparent_30%)]" />
         <div className="pointer-events-none absolute -right-6 -bottom-6 h-40 sm:h-56 sm:w-[110%] rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
         <div className="pointer-events-none absolute -right-3 -bottom-2 h-28 sm:h-40 sm:w-[130%] bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />

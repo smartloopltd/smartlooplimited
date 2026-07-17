@@ -10,6 +10,7 @@ import photoJosh from "./image/photo_2026-04-22_10-46-39.jpg";
 import photoAma from "./image/photo_2026-04-22_10-46-40.jpg";
 import photoSamuel from "./image/photo_2026-04-22_12-06-39.jpg";
 import photoJessica from "./image/jesijess.jpg";
+import ProductTechHighlights from "../components/ProductTechHighlights";
 
 const testimonials = [
   {
@@ -67,28 +68,46 @@ export default function Home() {
     let lastTime = performance.now();
 
     const step = (time: number) => {
+      if (!slider) return;
       const delta = time - lastTime;
       lastTime = time;
-      
-      // Increase scroll speed and ensure minimum delta to prevent stalling on mobile
-      const scrollSpeed = Math.max(delta, 16) * 0.06;
-      slider.scrollLeft += scrollSpeed;
 
+      const scrollSpeed = Math.max(delta, 16) * 0.06;
       const halfScroll = slider.scrollWidth / 2;
-      if (slider.scrollLeft >= halfScroll) {
-        slider.scrollLeft -= halfScroll;
+
+      if (halfScroll > 0) {
+        slider.scrollLeft += scrollSpeed;
+
+        if (slider.scrollLeft >= halfScroll) {
+          slider.scrollLeft -= halfScroll;
+        }
       }
 
       frame = requestAnimationFrame(step);
     };
 
+    const observer = typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => {
+      if (!slider) return;
+      const halfScroll = slider.scrollWidth / 2;
+      if (halfScroll > 0 && slider.scrollLeft >= halfScroll) {
+        slider.scrollLeft %= halfScroll;
+      }
+    }) : null;
+
+    if (observer) {
+      observer.observe(slider);
+    }
+
     frame = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(frame);
+    return () => {
+      cancelAnimationFrame(frame);
+      observer?.disconnect();
+    };
   }, []);
 
   return (
     <main className="bg-sky-950 text-slate-100">
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-20 sm:pt-24">
         <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.24),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(186,230,253,0.16),_transparent_30%)]" />
         <div className="pointer-events-none absolute -right-16 -bottom-12 h-72 w-[120%] rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.24),_rgba(56,189,248,0.04),transparent_88%)] blur-3xl opacity-90" />
         <div className="pointer-events-none absolute -right-8 -bottom-4 h-52 w-[140%] bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.18),transparent_92%)] blur-2xl opacity-70" />
@@ -97,7 +116,7 @@ export default function Home() {
         <div className="pointer-events-none absolute -left-16 -top-12 h-72 w-[120%] rounded-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.24),_rgba(56,189,248,0.04),transparent_88%)] blur-3xl opacity-90" />
         <div className="pointer-events-none absolute -left-8 -top-4 h-52 w-[140%] bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.18),transparent_92%)] blur-2xl opacity-70" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-sky-400/10" />
-        <div className="relative mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-18">
+        <div className="relative mx-auto w-full max-w-7xl px-4 pb-14 pt-6 sm:px-6 sm:pb-16 sm:pt-8 lg:px-8 lg:pb-18 lg:pt-10">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-200">
               Technology • Strategy • Growth
@@ -124,59 +143,41 @@ export default function Home() {
       </section>
 
       <section className="w-full bg-white">
-        <div className="mx-auto w-full max-w-7xl px-4 pt-10 pb-12 sm:px-6 lg:px-8 lg:pt-12 lg:pb-10">
-          <div className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Our vision and goals</p>
-            <h2 className="mt-3 text-3xl font-semibold text-sky-950 sm:text-4xl">
-              To build a future where technology is simpler to adopt, stronger to rely on, and more meaningful to the people who use it.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-sky-900/85">
-              Our vision is to help businesses and communities thrive through thoughtful digital solutions that are practical, resilient, and built for long-term growth. We are committed to raising the standard of delivery across development, cloud, training, and smart infrastructure by combining innovation with discipline, clarity, and measurable impact.
-            </p>
+        <div className="mx-auto w-full max-w-5xl px-6 py-10 sm:px-12 md:px-16">
+          <div className="pb-8">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Our vision and goals</p>
+              <p className="mt-5 text-lg leading-8 text-sky-900/85">
+                Our vision is to help businesses and communities thrive through thoughtful digital solutions that are practical, resilient, and built for long-term growth. We are committed to raising the standard of delivery across development, cloud, training, and smart infrastructure by combining innovation with discipline, clarity, and measurable impact.
+              </p>
+            </div>
+          </div>
+
+          <div className="py-8">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Our services</p>
+              <p className="mt-5 text-lg leading-8 text-sky-900/85">
+                Our services span software development, full-stack engineering, cloud and DevOps support, smart infrastructure, and practical enablement for teams and estates. We build solutions that help businesses move faster, reduce risk, and scale with confidence. Every engagement is designed to be practical, measurable, and directly tied to real growth outcomes.
+              </p>
+            </div>
+          </div>
+
+          <div className="py-8">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Why teams choose us</p>
+              <p className="mt-4 text-base leading-7 text-sky-900/80">
+                Whether you need custom software, dependable cloud infrastructure, practical training, or smart infrastructure for estates and businesses, we bring the experience to deliver with clarity and confidence. We help teams move from idea to launch without unnecessary risk, combining modern engineering, reliable operations, and business-focused technology strategy. Every engagement is tailored to your goals, your timeline, and your growth path. Smartloop Limited makes digital transformation feel ambitious, practical, and achievable.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-          <div className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Why teams choose us</p>
-            <h2 className="mt-3 text-3xl font-semibold text-sky-950 sm:text-4xl">
-              A trusted partner for development, cloud, training, and business growth.
-            </h2>
-            <p className="mt-4 text-base leading-7 text-sky-900/80">
-              Whether you need custom software, dependable cloud infrastructure, practical training, or smart infrastructure for estates and businesses, we bring the experience to deliver with clarity and confidence. We help teams move from idea to launch without unnecessary risk, combining modern engineering, reliable operations, and business-focused technology strategy. Every engagement is tailored to your goals, your timeline, and your growth path. Smartloop Limited makes digital transformation feel ambitious, practical, and achievable.
-            </p>
-          </div>
-        </div>
+        <ProductTechHighlights />
 
-        <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-          <div className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Our services</p>
-            <h2 className="mt-3 text-3xl font-semibold text-sky-950 sm:text-4xl">
-              Practical solutions for digital products, traffic, and team growth.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-sky-900/85">
-              Our services span software development, full-stack engineering, cloud and DevOps support, smart infrastructure, and practical enablement for teams and estates. We build solutions that help businesses move faster, reduce risk, and scale with confidence. Every engagement is designed to be practical, measurable, and directly tied to real growth outcomes.
-            </p>
-
-          </div>
-        </div>
-
-        <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
-          <div className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Client stories</p>
-            <h2 className="mt-3 text-3xl font-semibold text-sky-950 sm:text-4xl">
-              Trusted by teams building better digital experiences.
-            </h2>
-            <p className="mt-4 text-base leading-7 text-sky-900/80">
-              Hear from clients who experienced clear communication, fast delivery, and technology that supported their growth.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-10 overflow-hidden">
+        <div className="mt-4 overflow-hidden sm:mt-6 lg:mt-8">
           <div ref={sliderRef} className="mx-auto flex w-full max-w-[940px] gap-4 overflow-x-auto pb-4 hide-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
             {[...testimonials, ...testimonials].map((testimonial, index) => (
-              <article key={`${testimonial.name}-${index}`} className="min-w-[300px] max-w-[300px] flex-shrink-0 rounded-3xl bg-slate-100 p-4 transition duration-300 hover:bg-slate-200 hover:-translate-y-0.5 border border-sky-200">
+              <article key={`${testimonial.name}-${index}`} className="min-w-[300px] max-w-[300px] flex-shrink-0 rounded-3xl bg-slate-50 p-4 transition duration-300 hover:bg-slate-100 hover:-translate-y-0.5 border border-slate-200 shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-full bg-slate-300">
                     <Image src={testimonial.image} alt={testimonial.name} className="h-full w-full object-cover" width={40} height={40} />

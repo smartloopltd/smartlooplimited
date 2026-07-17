@@ -45,7 +45,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-sky-950 text-slate-100">
-      <header className="relative z-40 border-b border-sky-400/20 bg-sky-950/95 backdrop-blur-sm">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-sky-400/20 bg-sky-950/95 backdrop-blur-sm">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <Link href="/" className="relative inline-flex items-center rounded-full border border-white/15 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.22),_rgba(15,23,42,0.95)_70%)] px-5 py-2 text-lg font-semibold tracking-tight text-white shadow-[0_24px_80px_-18px_rgba(56,189,248,0.35)] transition duration-300 hover:bg-sky-950/95 hover:shadow-[0_26px_110px_-22px_rgba(56,189,248,0.45)]">
             <span className="absolute inset-0 rounded-full bg-white/10 blur-sm opacity-55" />

@@ -87,19 +87,21 @@ const services = [
 export default function ServicesPage() {
   return (
     <main className="bg-sky-950 text-slate-100 overflow-x-hidden">
-      <section className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24 overflow-hidden">
+      <section className="relative mx-auto w-full max-w-7xl px-4 pt-28 pb-20 sm:px-6 sm:pt-32 lg:px-8 lg:pt-36 lg:pb-24 overflow-hidden">
         <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(186,230,253,0.12),_transparent_30%)]" />
         <div className="pointer-events-none absolute -bottom-32 -right-40 -z-10 h-56 w-72 rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
         <div className="pointer-events-none absolute -bottom-32 -right-40 -z-10 h-40 w-96 bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
         <div className="pointer-events-none absolute -top-32 -left-40 h-56 w-72 rounded-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.22),_rgba(56,189,248,0.03),transparent_88%)] blur-3xl opacity-80" />
         <div className="pointer-events-none absolute -top-32 -left-40 h-40 w-96 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.14),transparent_92%)] blur-2xl opacity-60" />
 
-        <div className="max-w-3xl relative overflow-visible z-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200 relative z-10">Services</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl relative z-10">
+        <div className="relative z-10 max-w-3xl overflow-visible">
+          <p className="mb-8 block text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">
+            Services
+          </p>
+          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             We help businesses build modern technology solutions that work in the real world.
           </h1>
-          <p className="mt-6 text-lg leading-8 text-sky-100/80 relative z-10">
+          <p className="mt-8 text-lg leading-8 text-sky-100/80">
             We help businesses build modern, resilient digital systems through strategic software development, full-stack engineering, cloud operations, smart infrastructure, and practical enablement that turns technology into measurable growth.
           </p>
 
@@ -109,7 +111,7 @@ export default function ServicesPage() {
 
       <section className="w-full bg-white">
         <div className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <article key={service.id} className="p-1">
               {service.category && (

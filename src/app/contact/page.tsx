@@ -33,7 +33,8 @@ export default function ContactPage() {
     }
   };
 
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent('London, United Kingdom')}&z=14&t=${mapMode === 'satellite' ? 'k' : 'm'}&output=embed`;
+  const mapLocation = 'Mafars Sunshine Estate, Kurudu Barracks, Phase 2, FCT-Abuja, Nigeria';
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapLocation)}&z=15&t=${mapMode === 'satellite' ? 'k' : 'm'}&output=embed`;
 
   return (
     <main className="bg-sky-950 text-slate-100">
@@ -41,9 +42,9 @@ export default function ContactPage() {
         <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(186,230,253,0.12),_transparent_30%)]" />
         <div className="pointer-events-none absolute -right-16 -bottom-12 h-72 w-[120%] rounded-full bg-[radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.24),_rgba(56,189,248,0.04),transparent_88%)] blur-3xl opacity-90" />
         <div className="pointer-events-none absolute -left-16 -top-12 h-72 w-[120%] rounded-full bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.24),_rgba(56,189,248,0.04),transparent_88%)] blur-3xl opacity-90" />
-        <div className="relative mx-auto flex min-h-[36svh] w-full max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Contact</p>
+        <div className="relative mx-auto flex min-h-[36svh] w-full max-w-7xl flex-col justify-center px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28 lg:px-8 lg:pb-24 lg:pt-32">
+          <div className="relative z-10 max-w-3xl">
+            <p className="block text-sm font-semibold uppercase tracking-[0.3em] text-sky-200 opacity-100">Contact</p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Let’s create something remarkable.
             </h1>
@@ -60,28 +61,29 @@ export default function ContactPage() {
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Get in touch</p>
               <div className="mt-6 space-y-4 text-sm text-sky-900/85">
-                <p>hello@smartloop.co</p>
-                <p>+1 (555) 010-2040</p>
-                <p>Based in remote-first teams worldwide.</p>
+                <p><span className="font-semibold text-sky-950">Phone:</span> +234 806 563 5610</p>
+                <p><span className="font-semibold text-sky-950">Phone:</span> +234 905 531 6760</p>
+                <p><span className="font-semibold text-sky-950">Email:</span> smartloopnigerialimited@gmail.com</p>
+                <p><span className="font-semibold text-sky-950">Address:</span> Mafars Sunshine Estate, Kurudu Barracks, Phase 2, FCT-Abuja, Nigeria</p>
               </div>
             </div>
 
-            <form className="space-y-5">
+            <form className="space-y-5 rounded-[1.75rem] border border-slate-200/80 bg-[linear-gradient(135deg,_#f8fbff_0%,_#f4f8fc_100%)] p-5 shadow-[0_18px_45px_-24px_rgba(2,6,23,0.35)] sm:p-6">
               <div className="grid gap-5 md:grid-cols-2">
-                <label className="text-sm font-medium text-sky-950">
+                <label className="text-sm font-medium text-slate-700">
                   Name
-                  <input className="mt-2 w-full rounded-2xl border border-sky-300/30 bg-white px-4 py-3 text-sky-950 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="Your name" />
+                  <input className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 text-slate-800 outline-none ring-0 transition-all duration-300 placeholder:text-slate-400 focus:border-sky-400 focus:shadow-[0_0_0_4px_rgba(56,189,248,0.16)]" placeholder="Your name" />
                 </label>
-                <label className="text-sm font-medium text-sky-950">
+                <label className="text-sm font-medium text-slate-700">
                   Email
-                  <input className="mt-2 w-full rounded-2xl border border-sky-300/30 bg-white px-4 py-3 text-sky-950 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="you@example.com" />
+                  <input className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 text-slate-800 outline-none ring-0 transition-all duration-300 placeholder:text-slate-400 focus:border-sky-400 focus:shadow-[0_0_0_4px_rgba(56,189,248,0.16)]" placeholder="you@example.com" />
                 </label>
               </div>
-              <label className="block text-sm font-medium text-sky-950">
+              <label className="block text-sm font-medium text-slate-700">
                 Project details
-                <textarea className="mt-2 min-h-32 w-full rounded-2xl border border-sky-300/30 bg-white px-4 py-3 text-sky-950 outline-none ring-0 transition-all duration-300 focus:scale-105 focus:border-sky-400/50 focus:shadow-lg focus:shadow-sky-400/30" placeholder="Tell us about the experience you want to build." />
+                <textarea className="mt-2 min-h-32 w-full rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 text-slate-800 outline-none ring-0 transition-all duration-300 placeholder:text-slate-400 focus:border-sky-400 focus:shadow-[0_0_0_4px_rgba(56,189,248,0.16)]" placeholder="Tell us about the experience you want to build." />
               </label>
-              <button className="inline-flex items-center justify-center rounded-full bg-sky-400 px-5 py-3 font-medium text-white transition-all duration-300 hover:bg-sky-500 hover:scale-105 hover:shadow-2xl hover:shadow-sky-400/50">
+              <button className="inline-flex items-center justify-center rounded-full bg-sky-600 px-5 py-3 font-medium text-white transition-all duration-300 hover:bg-sky-700 hover:shadow-[0_12px_30px_-12px_rgba(2,132,199,0.55)]">
                 Send enquiry
               </button>
             </form>
@@ -92,7 +94,7 @@ export default function ContactPage() {
       <section className="w-full bg-white border-t border-sky-200/20">
         <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-sky-200/20 pb-4 text-sm text-sky-900/85 sm:px-0">
-            <p className="font-medium text-sky-950">Interactive location map</p>
+            <p className="font-medium text-sky-950">Abuja location map</p>
             <div className="flex items-center gap-2">
               <button
                 type="button"
