@@ -123,68 +123,70 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 pt-10 pb-12 sm:px-6 lg:px-8 lg:pt-12 lg:pb-10">
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Our vision and goals</p>
-          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
-            To build a future where technology is simpler to adopt, stronger to rely on, and more meaningful to the people who use it.
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-sky-100/85">
-            Our vision is to help businesses and communities thrive through thoughtful digital solutions that are practical, resilient, and built for long-term growth. We are committed to raising the standard of delivery across development, cloud, training, and smart infrastructure by combining innovation with discipline, clarity, and measurable impact.
-          </p>
+      <section className="w-full bg-white">
+        <div className="mx-auto w-full max-w-7xl px-4 pt-10 pb-12 sm:px-6 lg:px-8 lg:pt-12 lg:pb-10">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Our vision and goals</p>
+            <h2 className="mt-3 text-3xl font-semibold text-sky-950 sm:text-4xl">
+              To build a future where technology is simpler to adopt, stronger to rely on, and more meaningful to the people who use it.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-sky-900/85">
+              Our vision is to help businesses and communities thrive through thoughtful digital solutions that are practical, resilient, and built for long-term growth. We are committed to raising the standard of delivery across development, cloud, training, and smart infrastructure by combining innovation with discipline, clarity, and measurable impact.
+            </p>
+          </div>
         </div>
-      </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Why teams choose us</p>
-          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
-            A trusted partner for development, cloud, training, and business growth.
-          </h2>
-          <p className="mt-4 text-base leading-7 text-sky-100/80">
-            Whether you need custom software, dependable cloud infrastructure, practical training, or smart infrastructure for estates and businesses, we bring the experience to deliver with clarity and confidence. We help teams move from idea to launch without unnecessary risk, combining modern engineering, reliable operations, and business-focused technology strategy. Every engagement is tailored to your goals, your timeline, and your growth path. Smartloop Limited makes digital transformation feel ambitious, practical, and achievable.
-          </p>
+        <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Why teams choose us</p>
+            <h2 className="mt-3 text-3xl font-semibold text-sky-950 sm:text-4xl">
+              A trusted partner for development, cloud, training, and business growth.
+            </h2>
+            <p className="mt-4 text-base leading-7 text-sky-900/80">
+              Whether you need custom software, dependable cloud infrastructure, practical training, or smart infrastructure for estates and businesses, we bring the experience to deliver with clarity and confidence. We help teams move from idea to launch without unnecessary risk, combining modern engineering, reliable operations, and business-focused technology strategy. Every engagement is tailored to your goals, your timeline, and your growth path. Smartloop Limited makes digital transformation feel ambitious, practical, and achievable.
+            </p>
+          </div>
         </div>
-      </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Our services</p>
-          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
-            Practical solutions for digital products, traffic, and team growth.
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-sky-100/85">
-            Our services span software development, full-stack engineering, cloud and DevOps support, smart infrastructure, and practical enablement for teams and estates. We build solutions that help businesses move faster, reduce risk, and scale with confidence. Every engagement is designed to be practical, measurable, and directly tied to real growth outcomes.
-          </p>
+        <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Our services</p>
+            <h2 className="mt-3 text-3xl font-semibold text-sky-950 sm:text-4xl">
+              Practical solutions for digital products, traffic, and team growth.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-sky-900/85">
+              Our services span software development, full-stack engineering, cloud and DevOps support, smart infrastructure, and practical enablement for teams and estates. We build solutions that help businesses move faster, reduce risk, and scale with confidence. Every engagement is designed to be practical, measurable, and directly tied to real growth outcomes.
+            </p>
 
+          </div>
         </div>
-      </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Client stories</p>
-          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
-            Trusted by teams building better digital experiences.
-          </h2>
-          <p className="mt-4 text-base leading-7 text-sky-100/80">
-            Hear from clients who experienced clear communication, fast delivery, and technology that supported their growth.
-          </p>
+        <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Client stories</p>
+            <h2 className="mt-3 text-3xl font-semibold text-sky-950 sm:text-4xl">
+              Trusted by teams building better digital experiences.
+            </h2>
+            <p className="mt-4 text-base leading-7 text-sky-900/80">
+              Hear from clients who experienced clear communication, fast delivery, and technology that supported their growth.
+            </p>
+          </div>
         </div>
 
         <div className="mt-10 overflow-hidden">
           <div ref={sliderRef} className="mx-auto flex w-full max-w-[940px] gap-4 overflow-x-auto pb-4 hide-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
             {[...testimonials, ...testimonials].map((testimonial, index) => (
-              <article key={`${testimonial.name}-${index}`} className="min-w-[300px] max-w-[300px] flex-shrink-0 rounded-3xl bg-sky-900/80 p-4 transition duration-300 hover:bg-sky-800 hover:-translate-y-0.5">
+              <article key={`${testimonial.name}-${index}`} className="min-w-[300px] max-w-[300px] flex-shrink-0 rounded-3xl bg-slate-100 p-4 transition duration-300 hover:bg-slate-200 hover:-translate-y-0.5 border border-sky-200">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-full bg-slate-800">
+                  <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-full bg-slate-300">
                     <Image src={testimonial.image} alt={testimonial.name} className="h-full w-full object-cover" width={40} height={40} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-xs text-sky-300/90">{testimonial.title}</p>
+                    <p className="text-sm font-semibold text-sky-950">{testimonial.name}</p>
+                    <p className="text-xs text-sky-700">{testimonial.title}</p>
                   </div>
                 </div>
-                <p className="mt-3 text-sm leading-6 text-sky-100/85">
+                <p className="mt-3 text-sm leading-6 text-sky-900/85">
                   “{testimonial.quote}”
                 </p>
               </article>
